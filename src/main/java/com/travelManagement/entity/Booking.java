@@ -21,7 +21,7 @@ import lombok.Setter;
 	public class Booking {
 
 	    @Id
-	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    @GeneratedValue(strategy = GenerationType.AUTO)
 	    private Long id;
 
 	    @ManyToOne
@@ -33,9 +33,9 @@ import lombok.Setter;
 	    private TravelPackage travelPackage;
 
 	    @Column(name = "booking_date")
-	    private Date bookingDate;
+	    private LocalDateTime bookingDateAndTime;
 
-	    @Column(name = "status")
+	    @Column(name = "booking_status")
 	    private String bookingStatus; // e.g., CONFIRMED, PENDING, CANCELED
 
 	    @Column(name = "payment_status")

@@ -96,7 +96,11 @@ public class AdminController {
 
 	}
 	
-	
+//	@PutMapping("/updateBooking/{bookingId}")
+//	public String updateBooking(@PathVariable int bookingId) {
+//		return userService.updateBooking(bookingId);
+//
+//	}
 
 
 

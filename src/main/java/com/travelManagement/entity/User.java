@@ -60,18 +60,8 @@ public class User {
 	
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    @JsonManagedReference
-    private List<Booking> bookings = new ArrayList<>();
+     private List<Booking> bookings ;
 
-    // Ensure bidirectional mapping
-    public void addBooking(Booking bookingObj) {
-    	  if (bookings == null) {
-          	bookings = new ArrayList<>();
-          }
-        bookings.add(bookingObj);
-        bookingObj.setUser(this); // Ensure each booking is linked
-    }
-    
 
 
 }
